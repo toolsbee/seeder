@@ -1,0 +1,50 @@
+{
+    "name": "@toolsbee/seeder",
+    "version": "0.1.0",
+    "description": "Tiny, seedable data generator for testing and database seeding.",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/toolsbee/seeder.git"
+    },
+    "homepage": "https://github.com/toolsbee/seeder",
+    "bugs": {
+        "url": "https://github.com/toolsbee/seeder/issues"
+    },
+    "keywords": [
+        "random",
+        "seed",
+        "mock",
+        "testing",
+        "prng",
+        "tiny"
+    ],
+    "type": "module",
+    "main": "./dist/index.cjs",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.js",
+            "require": "./dist/index.cjs"
+        },
+        "./seeds/*": "./seeds/*"
+    },
+    "files": [
+        "dist",
+        "seeds",
+        "README.md",
+        "LICENSE"
+    ],
+    "scripts": {
+        "build": "tsup",
+        "test": "vitest run",
+        "prepublishOnly": "npm run build"
+    },
+    "devDependencies": {
+        "tsup": "^8.0.0",
+        "typescript": "^5.0.0",
+        "vitest": "^2.0.0"
+    }
+}
